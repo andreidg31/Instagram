@@ -74,6 +74,7 @@ export default function Header() {
                 </button>
                 {user && (
                   <div className="flex items-center cursor-pointer">
+                    <Link to={`/p/${user?.username}`}>
                       <img
                         className="rounded-full h-8 w-8 flex"
                         src="https://picsum.photos/300/300"
@@ -82,6 +83,7 @@ export default function Header() {
                           e.target.src = DEFAULT_IMAGE_PATH;
                         }}
                       />
+                    </Link>
                   </div>
                 )}
               </>
